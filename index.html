@@ -30,45 +30,6 @@
     <div class="modal" id="modal-content"></div>
   </div>
 
-  <!-- 관리자 비밀번호 모달 -->
-  <div class="overlay" id="pw-overlay">
-    <div class="pw-modal">
-      <h4>🔐 관리자 로그인</h4>
-      <p>관리자 비밀번호를 입력하세요</p>
-      <input type="password" id="pw-input" autocomplete="off" placeholder="비밀번호" />
-      <div class="pw-msg" id="pw-msg"></div>
-      <div class="pw-actions">
-        <button id="pw-cancel">취소</button>
-        <button id="pw-ok">확인</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- GitHub 연결 설정 모달 -->
-  <div class="overlay" id="gh-overlay">
-    <div class="pw-modal gh-modal">
-      <h4>🔗 GitHub 연결 설정</h4>
-      <p>수정 내용을 모두에게 영구 반영하려면 저장소에 연결하세요.</p>
-      <label for="gh-owner">GitHub 사용자명</label>
-      <input id="gh-owner" type="text" autocomplete="off" placeholder="bina-ssam" />
-      <label for="gh-repo">저장소 이름</label>
-      <input id="gh-repo" type="text" autocomplete="off" placeholder="teacher-vibecoding" />
-      <label for="gh-branch">브랜치</label>
-      <input id="gh-branch" type="text" autocomplete="off" value="main" />
-      <label for="gh-token">액세스 토큰 (Contents 쓰기 권한)</label>
-      <input id="gh-token" type="password" autocomplete="off" placeholder="github_pat_..." />
-      <div class="pw-msg" id="gh-msg"></div>
-      <div class="pw-actions">
-        <button id="gh-cancel">닫기</button>
-        <button id="gh-save">저장</button>
-      </div>
-      <button id="gh-clear" class="gh-clear">연결 정보 지우기</button>
-    </div>
-  </div>
-
-  <!-- 토스트 -->
-  <div class="toast" id="toast"></div>
-
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
