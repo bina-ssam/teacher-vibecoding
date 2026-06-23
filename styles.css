@@ -360,6 +360,16 @@ main { max-width: 1080px; margin: 0 auto; padding: 12px 20px 80px; }
   padding: 10px 12px;
 }
 
+/* 프롬프트 제목 (기본/응용) */
+.prompt-label {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 2px 0 8px;
+}
+.prompt-label.basic   { color: var(--leaf-dark); }
+.prompt-label.applied { color: var(--yellow-500); margin-top: 18px; }
+
 /* 프롬프트 박스 */
 .prompt-box {
   background: var(--white);

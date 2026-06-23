@@ -72,16 +72,20 @@ function siteCell(level, url) {
     </div>`;
 }
 
-/* ---------- 프롬프트 한 칸 (제목 없음) ---------- */
-function promptCell(text) {
+/* ---------- 프롬프트 한 칸 (기본/응용 제목 포함) ---------- */
+function promptCell(level, text) {
+  const cls = level === "기본" ? "basic" : "applied";
+  const label = `<div class="prompt-label ${cls}">${level} 프롬프트</div>`;
   if (text && text.trim()) {
     return `
+      ${label}
       <div class="prompt-box">
         <div class="prompt-text">${escapeHtml(text.trim())}</div>
         <button class="copy-btn" data-copy="${encodeURIComponent(text.trim())}">📋 복사하기</button>
       </div>`;
   }
   return `
+    ${label}
     <div class="prompt-box">
       <div class="prompt-text empty">아직 프롬프트가 등록되지 않았어요. 곧 채워질 예정이에요! ✏️</div>
     </div>`;
@@ -108,8 +112,8 @@ function openModal(idx) {
       </div>
       <div class="block">
         <div class="block-title"><span class="ic">💬</span> 프롬프트</div>
-        ${promptCell(prog.prompt.basic)}
-        ${promptCell(prog.prompt.applied)}
+        ${promptCell("기본", prog.prompt.basic)}
+        ${promptCell("응용", prog.prompt.applied)}
       </div>
     </div>
   `;
