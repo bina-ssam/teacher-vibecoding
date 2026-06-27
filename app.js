@@ -115,12 +115,61 @@ function openModal(idx) {
         ${promptCell("기본", prog.prompt.basic)}
         ${promptCell("응용", prog.prompt.applied)}
       </div>
+      <div class="block qr-block">
+        <div class="block-title"><span class="ic">📱</span> QR코드</div>
+        <div class="qr-row">
+          <div id="qr-canvas" class="qr-canvas"></div>
+          <div class="qr-side">
+            <p class="qr-desc">휴대폰으로 스캔하면 이 화면(사이트 링크·프롬프트)이 바로 열려요.</p>
+            <button class="qr-link-btn" id="qr-copy">🔗 링크 복사</button>
+          </div>
+        </div>
+      </div>
     </div>
   `;
 
   overlay.classList.add("open");
   document.body.style.overflow = "hidden";
   bindCopyButtons(overlay);
+  renderQR(prog);
+
+  // 주소창에 딥링크 반영 (공유·복사용)
+  history.replaceState(null, "", "#prog=" + encodeURIComponent(prog.name));
+}
+
+/* ---------- QR코드 생성 (딥링크) ---------- */
+function deepLink(name) {
+  return location.origin + location.pathname + "#prog=" + encodeURIComponent(name);
+}
+function renderQR(prog) {
+  const link = deepLink(prog.name);
+  const box = document.getElementById("qr-canvas");
+  if (box && typeof QRCode !== "undefined") {
+    try {
+      new QRCode(box, { text: link, width: 132, height: 132,
+        colorDark: "#4A4234", colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.M });
+    } catch (e) {
+      box.parentElement.parentElement.style.display = "none";
+    }
+  } else if (box) {
+    // 라이브러리 로드 실패 시 QR 영역 숨김
+    box.closest(".qr-block").style.display = "none";
+  }
+  const copyBtn = document.getElementById("qr-copy");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(link); }
+      catch (e) {
+        const ta = document.createElement("textarea");
+        ta.value = link; document.body.appendChild(ta); ta.select();
+        document.execCommand("copy"); ta.remove();
+      }
+      const old = copyBtn.textContent;
+      copyBtn.textContent = "✅ 복사 완료!";
+      setTimeout(() => { copyBtn.textContent = old; }, 1500);
+    });
+  }
 }
 
 function bindCopyButtons(overlay) {
@@ -144,6 +193,17 @@ function bindCopyButtons(overlay) {
 function closeModal() {
   document.getElementById("overlay").classList.remove("open");
   document.body.style.overflow = "";
+  history.replaceState(null, "", location.pathname + location.search);
+}
+
+/* ---------- 딥링크(#prog=...)로 들어오면 해당 프로그램 모달 열기 ---------- */
+function openFromHash() {
+  const m = location.hash.match(/prog=([^&]+)/);
+  if (!m) return;
+  let name;
+  try { name = decodeURIComponent(m[1]); } catch (e) { return; }
+  const idx = PROGRAMS.findIndex((p) => p.name === name);
+  if (idx >= 0) openModal(idx);
 }
 
 /* ---------- 분류 탭 (스크롤 이동) ---------- */
@@ -178,6 +238,7 @@ function escapeHtml(str) {
 document.addEventListener("DOMContentLoaded", () => {
   renderSections();
   setupTabs();
+  openFromHash();
 
   document.getElementById("overlay").addEventListener("click", (e) => {
     if (e.target.id === "overlay") closeModal();
