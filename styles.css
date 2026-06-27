@@ -371,7 +371,43 @@ main { max-width: 1080px; margin: 0 auto; padding: 12px 20px 80px; }
   padding: 16px;
 }
 .qr-canvas { flex: 0 0 auto; line-height: 0; }
-.qr-canvas img, .qr-canvas canvas { display: block; border-radius: 6px; }
+.qr-canvas img, .qr-canvas canvas {
+  display: block;
+  border-radius: 6px;
+  width: 150px !important;
+  height: 150px !important;
+}
+
+/* QR 인증 게이트 */
+.qr-gate {
+  background: var(--white);
+  border: 2px solid var(--yellow-100);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+}
+.qr-gate-row { display: flex; gap: 8px; margin-top: 4px; }
+.qr-gate-row input {
+  flex: 1;
+  font-family: var(--font);
+  font-size: 14px;
+  border: 2px solid var(--yellow-200);
+  border-radius: 10px;
+  padding: 9px 12px;
+}
+.qr-gate-row input:focus { outline: none; border-color: var(--yellow-400); }
+.qr-gate-row button {
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 800;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 18px;
+  background: var(--yellow-400);
+  color: var(--ink);
+  cursor: pointer;
+}
+.qr-gate-row button:hover { background: var(--yellow-500); }
+.qr-msg { min-height: 16px; margin-top: 8px; font-size: 12.5px; font-weight: 600; color: #E2553D; }
 .qr-side { flex: 1; }
 .qr-desc { font-size: 13px; color: var(--ink-soft); line-height: 1.55; margin-bottom: 12px; }
 .qr-link-btn {
