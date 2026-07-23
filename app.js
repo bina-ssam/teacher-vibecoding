@@ -3,8 +3,8 @@
  * ========================================================================= */
 
 const CATEGORIES = [
-  { key: "학급경영", emoji: '<svg class="ico-board" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="15" rx="2" fill="#3B7A57" stroke="#8B5E3C" stroke-width="2"/><path d="M6.5 8.5h8M6.5 11.5h5.5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/><rect x="9" y="18" width="6" height="2.4" rx="1" fill="#8B5E3C"/></svg>', title: "학급경영 프로그램" },
-  { key: "교과연계", emoji: "📚", title: "교과연계 프로그램" },
+  { key: "학급 운영", emoji: '<svg class="ico-board" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="15" rx="2" fill="#2CA5AD" stroke="#1E7A80" stroke-width="2"/><path d="M6.5 8.5h8M6.5 11.5h5.5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/><rect x="9" y="18" width="6" height="2.4" rx="1" fill="#1E7A80"/></svg>', title: "학급 운영 프로그램" },
+  { key: "교과 연계", emoji: "📚", title: "교과 연계 프로그램" },
 ];
 
 const toolClass = (tool) => (tool === "캔바 AI" ? "canva" : "gemini");
@@ -169,7 +169,7 @@ function renderQR(prog) {
     if (typeof QRCode !== "undefined") {
       try {
         new QRCode(box, { text: deepLink(prog.name), width: 320, height: 320,
-          colorDark: "#4A4234", colorLight: "#ffffff",
+          colorDark: "#20575C", colorLight: "#ffffff",
           correctLevel: QRCode.CorrectLevel.M });
       } catch (e) { /* 생성 실패 시 빈 영역 유지 */ }
     }

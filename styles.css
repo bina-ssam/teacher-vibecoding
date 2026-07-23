@@ -1,6 +1,6 @@
 /* =========================================================================
- *  교사는 이제 코딩하지 않는다. 바이브코딩한다.
- *  스타일 (개나리색 · 명랑 · 귀엽 · 깔끔)
+ *  수업에 바로 쓰는 바이브 코딩
+ *  스타일 (청록/민트 · 명랑 · 귀엽 · 깔끔)
  * ========================================================================= */
 
 @font-face {
@@ -13,19 +13,19 @@
 }
 
 :root {
-  --yellow-50:  #FFFDF2;
-  --yellow-100: #FFF8DC;
-  --yellow-200: #FFEFA8;
-  --yellow-300: #FFE45E;  /* 개나리 메인 */
-  --yellow-400: #FFD93D;
-  --yellow-500: #FBC02D;
-  --leaf:       #8BC34A;  /* 개나리 잎 포인트 */
-  --leaf-dark:  #689F38;
-  --ink:        #4A4234;
-  --ink-soft:   #8A8170;
+  --yellow-50:  #F2FBFB;
+  --yellow-100: #E1F5F6;
+  --yellow-200: #BFE8EA;
+  --yellow-300: #8DCFD2;  /* 책 메인 청록 */
+  --yellow-400: #5BC4C8;
+  --yellow-500: #2CA5AD;  /* 진한 청록 포인트 */
+  --leaf:       #45BEC4;  /* 보조 청록 */
+  --leaf-dark:  #1E8A92;
+  --ink:        #2A3B3D;
+  --ink-soft:   #6B8385;
   --white:      #FFFFFF;
-  --shadow:     0 8px 22px rgba(214, 178, 40, 0.18);
-  --shadow-hover: 0 14px 30px rgba(214, 178, 40, 0.30);
+  --shadow:     0 8px 22px rgba(44, 165, 173, 0.18);
+  --shadow-hover: 0 14px 30px rgba(44, 165, 173, 0.30);
   --radius:     22px;
   --radius-sm:  14px;
   --font: "Gowun Dodum", "Apple SD Gothic Neo", "Noto Sans KR", system-ui, -apple-system, sans-serif;
@@ -47,8 +47,8 @@ body {
   font-family: var(--font);
   color: var(--ink);
   background:
-    radial-gradient(circle at 12% -5%, rgba(255, 228, 94, 0.55), transparent 38%),
-    radial-gradient(circle at 92% 0%, rgba(255, 217, 61, 0.45), transparent 42%),
+    radial-gradient(circle at 12% -5%, rgba(141, 207, 210, 0.50), transparent 38%),
+    radial-gradient(circle at 92% 0%, rgba(91, 196, 200, 0.40), transparent 42%),
     var(--yellow-50);
   min-height: 100vh;
   line-height: 1.55;
@@ -88,7 +88,7 @@ body {
   gap: 10px;
   justify-content: center;
   padding: 14px 16px;
-  background: rgba(255, 253, 242, 0.82);
+  background: rgba(242, 251, 251, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 2px dashed var(--yellow-200);
 }
@@ -143,7 +143,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 12px 20px 80px; }
   font-size: 13px;
   font-weight: 700;
   color: var(--leaf-dark);
-  background: rgba(139, 195, 74, 0.16);
+  background: rgba(30, 138, 146, 0.14);
   padding: 5px 12px;
   border-radius: 999px;
 }
