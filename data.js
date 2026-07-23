@@ -699,7 +699,7 @@ const PROGRAMS = [
   },
   {
     category: "학급 운영",
-    name: "학급 규칙 만들기",
+    name: "학급 규칙 생성기",
     tool: "캔바 AI",
     site: { basic: "https://classroom-radio.my.canva.site/classrule-maker1", applied: "https://classroom-radio.my.canva.site/classrules-maker2" },
     prompt: {
