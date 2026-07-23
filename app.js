@@ -230,7 +230,9 @@ function openFromHash() {
   if (!m) return;
   let name;
   try { name = decodeURIComponent(m[1]); } catch (e) { return; }
-  const idx = PROGRAMS.findIndex((p) => p.name === name);
+  const norm = (s) => s.replace(/\s+/g, "");   // 공백 차이 무시
+  let idx = PROGRAMS.findIndex((p) => p.name === name);
+  if (idx < 0) idx = PROGRAMS.findIndex((p) => norm(p.name) === norm(name));
   if (idx >= 0) openModal(idx);
 }
 
