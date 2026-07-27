@@ -115,89 +115,15 @@ function openModal(idx) {
         ${promptCell("기본", prog.prompt.basic)}
         ${promptCell("응용", prog.prompt.applied)}
       </div>
-      <div class="block qr-block">
-        <div class="block-title"><span class="ic">📱</span> QR코드</div>
-        <div class="qr-gate" id="qr-gate">
-          <p class="qr-desc">QR코드를 보려면 인증코드를 입력하세요.</p>
-          <div class="qr-gate-row">
-            <input id="qr-code-input" type="password" inputmode="numeric" autocomplete="off" placeholder="인증코드" />
-            <button id="qr-code-ok">확인</button>
-          </div>
-          <div class="qr-msg" id="qr-code-msg"></div>
-        </div>
-        <div class="qr-reveal" id="qr-reveal" style="display:none">
-          <div class="qr-row">
-            <div id="qr-canvas" class="qr-canvas"></div>
-            <div class="qr-side">
-              <p class="qr-desc">휴대폰으로 스캔하면 이 화면이 바로 열려요.</p>
-              <button class="qr-link-btn" id="qr-download">⬇️ QR 이미지 저장</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   `;
 
   overlay.classList.add("open");
   document.body.style.overflow = "hidden";
   bindCopyButtons(overlay);
-  renderQR(prog);
 
-  // 주소창에 딥링크 반영 (공유·복사용)
+  // 주소창에 딥링크 반영 (외부 QR 스캔 시 열림 · 공유용)
   history.replaceState(null, "", "#prog=" + encodeURIComponent(prog.name));
-}
-
-/* ---------- QR코드 (인증코드 입력 후 표시 + 이미지 저장) ---------- */
-const QR_CODE = "2026";
-let qrUnlocked = false;
-
-function deepLink(name) {
-  return location.origin + location.pathname + "#prog=" + encodeURIComponent(name);
-}
-
-function renderQR(prog) {
-  const gate = document.getElementById("qr-gate");
-  const reveal = document.getElementById("qr-reveal");
-  if (!gate || !reveal) return;
-
-  const showQR = () => {
-    gate.style.display = "none";
-    reveal.style.display = "";
-
-    const box = document.getElementById("qr-canvas");
-    box.innerHTML = "";
-    if (typeof QRCode !== "undefined") {
-      try {
-        new QRCode(box, { text: deepLink(prog.name), width: 320, height: 320,
-          colorDark: "#20575C", colorLight: "#ffffff",
-          correctLevel: QRCode.CorrectLevel.M });
-      } catch (e) { /* 생성 실패 시 빈 영역 유지 */ }
-    }
-
-    const dl = document.getElementById("qr-download");
-    if (dl) dl.addEventListener("click", () => {
-      const canvas = document.querySelector("#qr-canvas canvas");
-      const img = document.querySelector("#qr-canvas img");
-      const dataUrl = canvas ? canvas.toDataURL("image/png") : (img ? img.src : null);
-      if (!dataUrl) return;
-      const a = document.createElement("a");
-      a.href = dataUrl;
-      a.download = "QR_" + prog.name.replace(/[\\/:*?"<>|]/g, "") + ".png";
-      document.body.appendChild(a); a.click(); a.remove();
-    });
-  };
-
-  if (qrUnlocked) { showQR(); return; }
-
-  const input = document.getElementById("qr-code-input");
-  const ok = document.getElementById("qr-code-ok");
-  const msg = document.getElementById("qr-code-msg");
-  const tryUnlock = () => {
-    if (input.value.trim() === QR_CODE) { qrUnlocked = true; showQR(); }
-    else { msg.textContent = "인증코드가 올바르지 않습니다."; input.select(); }
-  };
-  ok.addEventListener("click", tryUnlock);
-  input.addEventListener("keydown", (e) => { if (e.key === "Enter") tryUnlock(); });
 }
 
 function bindCopyButtons(overlay) {
