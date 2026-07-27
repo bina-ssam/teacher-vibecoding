@@ -10,7 +10,7 @@ const PROGRAMS = [
     category: "학급 운영",
     name: "독서 마라톤",
     tool: "제미나이",
-    site: { basic: "", applied: "" },
+    site: { basic: "https://share.gemini.google/c6kg09SszLlD", applied: "https://share.gemini.google/8M98PZc8eDkr" },
     prompt: {
       basic: `[역할 설정]
 너는 초등학교 교사를 위한 교육용 웹앱을 개발하는 전문 개발자이자, 초등학생의 발달 수준과 학급 운영 상황을 잘 이해하는 바이브코딩 전문가야. 초등학교 학급에서 그림책 읽기 활동을 쉽고 재미있게 기록할 수 있는 독서 기록 웹앱을 만들어줘.
@@ -112,7 +112,7 @@ const PROGRAMS = [
     category: "학급 운영",
     name: "우정 4컷",
     tool: "제미나이",
-    site: { basic: "", applied: "" },
+    site: { basic: "https://share.gemini.google/8QJJOAhBZL64", applied: "https://share.gemini.google/qa7F6IFtBvVN" },
     prompt: {
       basic: `[역할설정]
 너는 초등학교 교사를 위한 교육용 웹앱을 개발하는 전문 개발자이자, 초등학생의 발달 수준과 학급 활동 분위기를 잘 이해하는 바이브코딩 전문가야.초등학생들이 친구와 함께 사진을 찍고, 스티커로 꾸미며, 추억을 이미지로 저장할 수 있는 웹앱을 만들어줘.
@@ -438,7 +438,7 @@ const PROGRAMS = [
     category: "학급 운영",
     name: "학급 신문 자동 생성기",
     tool: "제미나이",
-    site: { basic: "", applied: "https://gemini.google.com/share/681a1e228b60" },
+    site: { basic: "https://share.gemini.google/Uzs3RyxAeAXB", applied: "https://gemini.google.com/share/681a1e228b60" },
     prompt: {
       basic: `[역할 설정]
 너는 초등학교 교사를 위한 교육용 웹앱을 개발하는 전문 개발자이자, 초등학생의 글쓰기 활동과 학급 신문 만들기 활동을 잘 이해하는 바이브코딩 전문가야.초등학생들이 교실이나 가정에서 쉽게 사용할 수 있는 학급 신문 자동 생성기 웹앱을 만들어줘.웹앱은 한 페이지로 구성하고, HTML, CSS, JavaScript를 활용해 바로 실행 가능한 형태로 만들어줘. 학생들이 입력한 내용이 오른쪽 신문 지면에 실시간으로 반영되도록 구성해줘.
@@ -999,7 +999,7 @@ Web Speech API로 음성을 바로 텍스트로 변환해줘.인식 중인 내�
     category: "학급 운영",
     name: "학급 칭찬 샤워",
     tool: "제미나이",
-    site: { basic: "https://gemini.google.com/share/20be5206ef7b", applied: "" },
+    site: { basic: "https://gemini.google.com/share/d5dba2617d95?skid=fc3b004a-7a71-4c30-b6b4-84a25be7fae7", applied: "https://gemini.google.com/share/20be5206ef7b" },
     prompt: {
       basic: `[역할 설정]
 너는 초등학교 교사이자 웹 개발자야. 코딩을 모르는 교사들도 즉시 쓸 수 있는 프론트엔드(React, Tailwind CSS) 기반의 웹 서비스를 제작할거야.
@@ -1189,7 +1189,7 @@ Web Speech API로 음성을 바로 텍스트로 변환해줘.인식 중인 내�
     category: "교과 연계",
     name: "[국어] 낱말 찾기",
     tool: "제미나이",
-    site: { basic: "", applied: "https://gemini.google.com/share/3c74cc40608c" },
+    site: { basic: "https://share.gemini.google/5k2XlOQb44jn", applied: "https://gemini.google.com/share/3c74cc40608c" },
     prompt: {
       basic: `[역할 설정]
 너는 초등학교 교사를 위한 교육용 웹 애플리케이션을 개발하는 전문 개발자이자, 초등학생의 놀이형 학습 활동을 잘 이해하는 바이브코딩 전문가야.초등학생들이 교실이나 가정에서 재미있게 낱말을 찾고, 교사가 직접 퍼즐을 만들어 수업에 활용할 수 있는 웹앱을 만들어줘.
@@ -1306,7 +1306,7 @@ Web Speech API로 음성을 바로 텍스트로 변환해줘.인식 중인 내�
     category: "교과 연계",
     name: "[국어] 끝말잇기",
     tool: "캔바 AI",
-    site: { basic: "https://majang2026.my.canva.site/c9n1ax86xnddbmd8", applied: "" },
+    site: { basic: "https://majang2026.my.canva.site/c9n1ax86xnddbmd8", applied: "https://share.gemini.google/l0NbmLmeYOtM" },
     prompt: {
       basic: `[역할 설정]
 너는 초등학교 저학년을 위한 교육용 웹사이트를 개발하는 전문 개발자이자, 초등학교 1학년 학생의 한글 발달 수준을 잘 이해하는 바이브코딩 전문가야. 초등학교 1학년 학생들이 한글 어휘를 재미있게 익힐 수 있는 끝말잇기 웹사이트를 만들어줘.
@@ -1520,7 +1520,7 @@ Web Speech API로 음성을 바로 텍스트로 변환해줘.인식 중인 내�
     category: "교과 연계",
     name: "[국어] 질문 만들기 슬롯머신",
     tool: "제미나이",
-    site: { basic: "https://gemini.google.com/share/ccf2bfd11df6", applied: "" },
+    site: { basic: "https://gemini.google.com/share/ccf2bfd11df6", applied: "https://share.gemini.google/S4wk6c5vvofK" },
     prompt: {
       basic: `[역할 설정]
 너는 초등학교 교사이자 웹 개발자야. 코딩을 모르는 교사들도 즉시 쓸 수 있는 단일 HTML 파일(CSS, JS 내장) 기반의 웹 서비스를 제작할거야.
