@@ -256,8 +256,24 @@ main { max-width: 1080px; margin: 0 auto; padding: 12px 20px 80px; }
   transform: translateY(18px) scale(0.97);
   transition: transform 0.22s cubic-bezier(.2,.9,.3,1.2);
   border: 3px solid var(--yellow-300);
+  scrollbar-width: thin;                                  /* Firefox */
+  scrollbar-color: rgba(44, 165, 173, 0.35) transparent;
 }
 .overlay.open .modal { transform: translateY(0) scale(1); }
+
+/* 스크롤바를 얇고 둥글게 → 둥근 모서리 유지 (Chrome/Safari) */
+.modal::-webkit-scrollbar { width: 10px; }
+.modal::-webkit-scrollbar-track { background: transparent; }
+.modal::-webkit-scrollbar-thumb {
+  background: rgba(44, 165, 173, 0.35);
+  border-radius: 999px;
+  border: 3px solid transparent;      /* 트랙 안쪽으로 여백을 줘 모서리와 안 닿게 */
+  background-clip: padding-box;
+}
+.modal::-webkit-scrollbar-thumb:hover {
+  background: rgba(44, 165, 173, 0.6);
+  background-clip: padding-box;
+}
 
 .modal-head {
   background: linear-gradient(135deg, var(--yellow-300), var(--yellow-400));
