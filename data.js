@@ -205,7 +205,7 @@ const PROGRAMS = [
     category: "학급 운영",
     name: "1인 1역 랜덤 뽑기",
     tool: "캔바 AI",
-    site: { basic: "", applied: "https://majang2026.my.canva.site/c90ng62h66zxwkxm" },
+    site: { basic: "https://edupongpong.my.canva.site/c90ng62h66zxwkxm", applied: "https://edupongpong.my.canva.site/c90ng62h66zxwkxm" },
     prompt: {
       basic: `[역할설정]
 너는 초등학교 교사를 위한 학급 운영 웹앱을 개발하는 전문 개발자이자, 초등학생의 생활지도와 학급 역할 운영을 잘 이해하는 바이브코딩 전문가야. 초등학교 학급에서 학생 이름과 역할을 입력하면 자동으로 1대1 랜덤 매칭해 주는 웹사이트를 만들어줘.
@@ -1107,7 +1107,7 @@ Web Speech API로 음성을 바로 텍스트로 변환해줘.인식 중인 내�
     category: "학급 운영",
     name: "마니또 미션 생성기",
     tool: "캔바 AI",
-    site: { basic: "https://ddobagissem.my.canva.site/mission1", applied: "" },
+    site: { basic: "https://ddobagissem.my.canva.site/secret1", applied: "" },
     prompt: {
       basic: `[역할 설정]
 너는 초등학교 교사이자 웹 개발자야. 코딩을 모르는 교사들도 즉시 쓸 수 있는 단일 HTML 파일(CSS, JS 내장) 기반의 웹 서비스를 제작해 줘.
@@ -1189,7 +1189,7 @@ Web Speech API로 음성을 바로 텍스트로 변환해줘.인식 중인 내�
     category: "교과 연계",
     name: "[국어] 낱말 찾기",
     tool: "제미나이",
-    site: { basic: "https://share.gemini.google/5k2XlOQb44jn", applied: "https://gemini.google.com/share/3c74cc40608c" },
+    site: { basic: "https://share.gemini.google/5k2XlOQb44jn", applied: "https://share.gemini.google/Ifg49YShoD1B" },
     prompt: {
       basic: `[역할 설정]
 너는 초등학교 교사를 위한 교육용 웹 애플리케이션을 개발하는 전문 개발자이자, 초등학생의 놀이형 학습 활동을 잘 이해하는 바이브코딩 전문가야.초등학생들이 교실이나 가정에서 재미있게 낱말을 찾고, 교사가 직접 퍼즐을 만들어 수업에 활용할 수 있는 웹앱을 만들어줘.
@@ -1305,8 +1305,8 @@ Web Speech API로 음성을 바로 텍스트로 변환해줘.인식 중인 내�
   {
     category: "교과 연계",
     name: "[국어] 끝말잇기",
-    tool: "캔바 AI",
-    site: { basic: "https://majang2026.my.canva.site/c9n1ax86xnddbmd8", applied: "https://share.gemini.google/l0NbmLmeYOtM" },
+    tool: "제미나이",
+    site: { basic: "https://share.gemini.google/JragYPmirMbV", applied: "https://share.gemini.google/l0NbmLmeYOtM" },
     prompt: {
       basic: `[역할 설정]
 너는 초등학교 저학년을 위한 교육용 웹사이트를 개발하는 전문 개발자이자, 초등학교 1학년 학생의 한글 발달 수준을 잘 이해하는 바이브코딩 전문가야. 초등학교 1학년 학생들이 한글 어휘를 재미있게 익힐 수 있는 끝말잇기 웹사이트를 만들어줘.
@@ -1949,7 +1949,7 @@ localStorage, IndexedDB, 서버 저장은 사용하지 말아줘.모든 진행 �
     category: "교과 연계",
     name: "[실과] 꿈 직업 탐색기",
     tool: "캔바 AI",
-    site: { basic: "https://edupongpong.my.canva.site/camye5zjh4kt03sk", applied: "" },
+    site: { basic: "https://edupongpong.my.canva.site/camt2sqjgskre6p1", applied: "" },
     prompt: {
       basic: `[역할 설정]
 너는 초등학교 교사를 돕는 숙련된 프론트엔드 개발자이자 UI/UX 디자이너야. 초등학교 고학년들이 15개의 상황 질문을 통해 자신의 강점을 파악하고, 최적의 미래 직업을 제안받는 반응형 SPA(Single Page Application) 개발해 줘.
