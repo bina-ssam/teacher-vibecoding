@@ -10,7 +10,7 @@ const PROGRAMS = [
     category: "학급 운영",
     name: "독서 마라톤",
     tool: "제미나이",
-    site: { basic: "https://share.gemini.google/c6kg09SszLlD", applied: "https://share.gemini.google/8M98PZc8eDkr" },
+    site: { basic: "https://share.gemini.google/wqseM06lwGCe", applied: "https://share.gemini.google/Q3V9eonmhl2W" },
     prompt: {
       basic: `[역할 설정]
 너는 초등학교 교사를 위한 교육용 웹앱을 개발하는 전문 개발자이자, 초등학생의 발달 수준과 학급 운영 상황을 잘 이해하는 바이브코딩 전문가야. 초등학교 학급에서 그림책 읽기 활동을 쉽고 재미있게 기록할 수 있는 독서 기록 웹앱을 만들어줘.
