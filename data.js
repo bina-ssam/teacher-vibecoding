@@ -1923,7 +1923,7 @@ localStorage, IndexedDB, 서버 저장은 사용하지 말아줘.모든 진행 �
     category: "교과 연계",
     name: "[실과] 꿈 직업 탐색기",
     tool: "캔바 AI",
-    site: { basic: "https://edupongpong.my.canva.site/camt2sqjgskre6p1", applied: "" },
+    site: { basic: "https://edupongpong.my.canva.site/camye5zjh4kt03sk", applied: "" },
     prompt: {
       basic: `[역할 설정]
 너는 초등학교 교사를 돕는 숙련된 프론트엔드 개발자이자 UI/UX 디자이너야. 초등학교 고학년들이 15개의 상황 질문을 통해 자신의 강점을 파악하고, 최적의 미래 직업을 제안받는 반응형 SPA(Single Page Application) 개발해 줘.
