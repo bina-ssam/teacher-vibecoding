@@ -1752,7 +1752,7 @@ localStorage, IndexedDB, 서버 저장은 사용하지 말아줘.모든 진행 �
     category: "교과 연계",
     name: "[과학] 빛의 성질 게임",
     tool: "제미나이",
-    site: { basic: "https://share.gemini.google/XSGdjd3GrkKE", applied: "https://share.gemini.google/LI02cq3L98fe" },
+    site: { basic: "https://share.gemini.google/YPxWhTKRK8CN", applied: "https://share.gemini.google/LI02cq3L98fe" },
     prompt: {
       basic: `[역할 설정]
  초등학교 교사이자 웹 개발자로서, 코딩을 모르는 교사들도 즉시 쓸 수 있는 단일 HTML 파일(CSS, JS 내장) 기반의 웹 서비스를 제작해 줘.
